@@ -1,6 +1,9 @@
 /* ================================= 
   Base Element Styles
 ==================================== */
+* {
+    box-sizing: border-box;
+}
 
 body {
 	line-height: 1.6;
@@ -27,9 +30,10 @@ a {
 
 /* ---- Layout Containers ---- */
 .container {
-    width: 70%;
-    margin: 0 auto;
+    padding-left: 1em;
+    padding-right: 1em;
 }
+/* this padding rule will be shared by ALL SCREEN types/devices, meaning that mobile and larger screens will have this padding */
 
 
 .main-header {
@@ -41,6 +45,19 @@ a {
     text-align: center;
 	padding: 2em 0;
 	background: #d9e4ea;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px ) {
+    .container {
+        width: 70%;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
 }
 
 /* ---- Page Elements ---- */
